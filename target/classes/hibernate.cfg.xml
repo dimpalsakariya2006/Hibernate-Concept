@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+"-//Hibernate/Hibernate Configuration DTD//EN"
+"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+	<session-factory>
+
+		<property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+		<property name="hibernate.connection.url">jdbc:mysql://localhost:3306/StudentDetails</property>
+		<property name="hibernate.connection.username">root</property>
+		<property name="hibernate.connection.password">Nikunj.007</property>
+		<property name="show_sql">true</property>
+		<property name="hibernate.hbm2ddl.auto">create</property>
+		<property name="hibernate.dialect">org.hibernate.dialect.MySQL5Dialect</property>
+		<mapping class="com.miit.hibernateconept.Student" />
+		<mapping class="com.miit.hibernateconept.Course" />
+		<mapping class="com.miit.hibernateconept.Person" />
+		<mapping class="com.miit.hibernateconept.Laptop" />
+		<mapping class="com.miit.hibernateconept.Employee" />
+		<mapping class="com.miit.hibernateconept.Department" />
+		<mapping class="com.miit.hibernateconept.Member" />
+		<mapping class="com.miit.hibernateconept.Library" />
+		
+
+	</session-factory>
+</hibernate-configuration>

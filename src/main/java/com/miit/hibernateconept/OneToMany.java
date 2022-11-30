@@ -49,6 +49,16 @@ public class OneToMany {
 		session.save(e2);
 		session.save(e3);
 		
+		//retrive data
+		
+		Department d1 = session.get(Department.class, 25);
+		System.out.println(d1.getDid()+" "+d1.getDname());
+		
+//		for(Employee e : list)
+//		{
+//			System.out.println(e.getEmpid()+" "+ e.getEmpname());
+//		}
+		
 		Transaction txn = session.beginTransaction();
 
 		txn.commit();

@@ -4,6 +4,7 @@ import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.Id;
 import javax.persistence.ManyToMany;
 
@@ -17,7 +18,7 @@ public class Member {
 	private int mid;
 	@Column(name="Member_Name")
 	private String mname;
-	@ManyToMany(mappedBy="member")
+	@ManyToMany(mappedBy="member", fetch= FetchType.EAGER)
 	private List<Library> library;
 	
 	public List<Library> getLibrary() {

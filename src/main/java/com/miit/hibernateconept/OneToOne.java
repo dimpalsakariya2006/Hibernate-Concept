@@ -1,9 +1,14 @@
 package com.miit.hibernateconept;
 
+import java.util.Iterator;
+import java.util.List;
+
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.hibernate.cfg.Configuration;
+import org.hibernate.query.Query;
+
 
 public class OneToOne {
 
@@ -27,6 +32,21 @@ public class OneToOne {
 		
 		session.save(p1);
 		session.save(l1);
+		
+		//retrive data
+		
+		Person p =(Person) session.get(Person.class, 1);
+		System.out.println(p.getPid()+" "+p.getPname());
+		
+		Laptop l =(Laptop) session.get(Laptop.class, 1212);
+		System.out.println(l.getLid()+" "+l.getLname());
+		
+//		String SQL_QUERY = "from Laptop laptop";
+//		Query query = session.createQuery(SQL_QUERY);
+//		List<Laptop> laptoplist = query.list();
+//		for (Iterator iterator = laptoplist.iterator(); iterator.hasNext();) {
+//			Laptop obj = (Laptop) iterator.next();
+//			System.out.println("Laptopp Name: " + obj.getLname());
 
 		Transaction txn = session.beginTransaction();
 
@@ -35,4 +55,5 @@ public class OneToOne {
 		factory.close();
 	}
 
-}
+	}
+

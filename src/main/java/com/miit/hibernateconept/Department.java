@@ -1,13 +1,10 @@
 package com.miit.hibernateconept;
-
 import java.util.List;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
-
-
 
 @Entity
 public class Department {
@@ -18,7 +15,7 @@ public class Department {
 	@Column(name="Department")
 	private String dname;
 	
-	@OneToMany(mappedBy = "department")
+	@OneToMany(mappedBy = "department" ,fetch = FetchType.EAGER)
 	private List<Employee> employees;
 	
 	public List<Employee> getEmployees() {

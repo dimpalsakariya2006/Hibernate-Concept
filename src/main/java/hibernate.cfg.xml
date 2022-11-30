@@ -21,6 +21,16 @@
 		<mapping class="com.miit.hibernateconept.Department" />
 		<mapping class="com.miit.hibernateconept.Member" />
 		<mapping class="com.miit.hibernateconept.Library" />
+		<mapping class="Inheritance.AdminTablePerHeirarchy" />
+		<mapping class="Inheritance.StudentTablePerHeirarchy" />
+		<mapping class="Inheritance.TeacherTablePerHeirarchy" />
+		<mapping class="Inheritance.AdminTablePerSubclass" />
+		<mapping class="Inheritance.StudentTablePerSubclass" />
+		<mapping class="Inheritance.TeacherTablePerSubclass" />
+		<mapping class="Inheritance.AdminTablePerConcreteClass" />
+		<mapping class="Inheritance.StudentTablePerConcreteClass" />
+		<mapping class="Inheritance.TeacherTablePerConcreteClass" />
+		
 		
 
 	</session-factory>

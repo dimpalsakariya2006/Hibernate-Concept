@@ -40,17 +40,34 @@ public class ManyToMany {
 		m2.setMname("Bhumi Lad");
 		m2.setLibrary(list1);
 		
+		Member m3 = new Member();
+		m3.setLibrary(list1);
+		m3.setMid(103);
+		m3.setMname("Pruthvi Pavashiya");
+		
 		List<Member> list2 =new ArrayList<Member>();
 		list2.add(m1);
 		list2.add(m2);
+		list2.add(m3);
 		
 		l1.setMember(list2);
 		l2.setMember(list2);
 		
+		//retrive data
+		
+//		for(Member m : list2)
+//		{
+//			System.out.println(m.getMid()+" "+ m.getMname()+ " "+m.getLibrary());
+//		}
+//		for(Library l : list1)
+//		{
+//			System.out.println(l.getBookid()+" "+ l.getBookname() +" "+l.getMember());
+//		}
 		session.save(l1);
 		session.save(l2);
 		session.save(m1);
 		session.save(m2);
+		session.save(m3);
 		
 		Transaction txn = session.beginTransaction();
 

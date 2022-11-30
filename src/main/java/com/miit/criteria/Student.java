@@ -1,4 +1,4 @@
-package com.miit.hibernateconept;
+package com.miit.criteria;
 
 import java.io.Serializable;
 
@@ -50,15 +50,4 @@ public class Student implements Serializable {
 
 	@Column
 	private String department;
-	
-	private Course course;
-
-	public Course getCourse() {
-		return course;
-	}
-
-	public void setCourse(Course course) {
-		this.course = course;
-	}
-	
 }
